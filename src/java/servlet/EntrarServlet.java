@@ -62,7 +62,8 @@ public class EntrarServlet extends HttpServlet {
                 text = "<script type='text/javascript'> alert('LOGADO " + est.getNome() + "')</script>";
 
             } else {
-                text = "<script type='text/javascript'> alert('INVALIDO')</script>";
+               // text = "<script type='text/javascript'> alert('INVALIDO')</script>";
+                text = "Dados Inválidos.";
 
             }
 

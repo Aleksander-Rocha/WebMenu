@@ -5,19 +5,23 @@
  */
 package servlet;
 
+import dao.CategoriaDAO;
+import dao.EstabelecimentoDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import model.CategoriaModel;
+import model.EstabelecimentoModel;
 
 /**
  *
  * @author Alexandre
  */
-@WebServlet(name = "VerCardapio", urlPatterns = {"/menu"})
 public class VerCardapio extends HttpServlet {
 
     /**
@@ -31,19 +35,36 @@ public class VerCardapio extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet VerCardapio</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet VerCardapio at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        //HttpSession session = request.getSession(true);
+
+        CategoriaModel cat = new CategoriaModel();
+        CategoriaDAO catdao = new CategoriaDAO();
+        List<CategoriaModel> catList = null;//catdao.listarCategorias((Integer) session.getAttribute("user_id"));
+        EstabelecimentoModel est = new EstabelecimentoModel();
+        EstabelecimentoDAO estdao = new EstabelecimentoDAO();
+        est = estdao.listarEstabelecimentoId(Integer.parseInt(request.getParameter("key")));
+        
+        if(est.getIdestabelecimento() == 0){
+            request.getRequestDispatcher("error404_cardapio.jsp").forward(request, response);
         }
+
+        request.setAttribute("categoriaList", catdao.listarCategorias(est.getIdestabelecimento()));
+        request.setAttribute("idestabelecimento", Integer.parseInt(request.getParameter("key")));
+        request.setAttribute("est_nome", est.getNome());
+        // System.out.printf("%d ",(num[i]/10000)%10," ");
+
+        String[] digits = est.getTelefone().split("(?<=.)");
+
+        request.setAttribute("est_telefone", digits[0]+digits[1] +" "+ digits[2]+ digits[3]+ digits[4]+ digits[5]+ digits[6]+ digits[7]+ digits[8]+ digits[9]+ digits[10]);
+        request.setAttribute("est_descricao", est.getDescricao());
+        if(est.getBairro() == null || est.getLogradouro() == null || est.getNumero() == 0 || est.getCidade() == null || est.getEstado() == null){
+            request.setAttribute("est_endereco", "Endereço incompleto! :(");
+        }else{
+            request.setAttribute("est_endereco", "   "+est.getLogradouro()+", nº "+ est.getNumero()+", "+ est.getBairro()+" | "+est.getCidade()+"-"+est.getEstado());
+        }
+        request.setAttribute("est_tipo", "Bar&Boteco");
+        request.setAttribute("est_imagem", est.getImagem());
+        request.getRequestDispatcher("vercardapio.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

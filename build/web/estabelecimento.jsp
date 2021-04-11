@@ -5,7 +5,7 @@
 
     <head>
         <%@include file="head.jsp" %>
-        
+
 
         <script type="text/javascript">
             function updateEstabelecimento(txt) {
@@ -15,6 +15,15 @@
             }
 
         </script>
+        <style>
+            .foto_perfil{
+                margin-left: 20px;
+            }
+            .imagem_perfil{
+                width: 100px; height: 100px; border-radius: 10px;
+                background-position: center;background-size:cover;background-repeat: no-repeat;
+            }
+        </style>
 
     </head>
 
@@ -64,33 +73,33 @@
                 <!-- ============================================================== -->
                 <!-- Container fluid  -->
                 <!-- ============================================================== -->
-                            <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- Start Page Content -->
-                <!-- ============================================================== -->
-                <!-- Row -->
-                <div class="row">
-                    <!-- Column -->
-                    <div class="col-lg-4 col-xlg-3 col-md-12">
-                        <div class="white-box">
-                            <div class="user-bg"> <img alt="user" src="plugins/images/large/img1.jpg">
-                                <div class="overlay-box">
-                                    <div class="user-content">
-                                        <a href="javascript:void(0)"><img src="plugins/images/users/${imagem}"
-                                                class="thumb-lg img-circle" alt="img"></a>
-                                        <h4 class="text-white mt-2">${nome}</h4>
-                                        <h5 class="text-white mt-2">Bar&Boteco</h5>
+                <div class="container-fluid">
+                    <!-- ============================================================== -->
+                    <!-- Start Page Content -->
+                    <!-- ============================================================== -->
+                    <!-- Row -->
+                    <div class="row">
+                        <!-- Column -->
+                        <div class="col-lg-4 col-xlg-3 col-md-12">
+                            <div class="white-box">
+                                <div class="user-bg"> <img alt="user" src="plugins/images/large/img1.jpg">
+                                    <div class="overlay-box">
+                                        <div class="user-content">
+                                            <a href="javascript:void(0)"><img src="plugins/images/users/${imagem}"
+                                                                              class="thumb-lg img-circle" alt="img"></a>
+                                            <h4 class="text-white mt-2">${nome}</h4>
+                                            <h5 class="text-white mt-2">Bar&Boteco</h5>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="user-btm-box mt-5 d-md-flex">
-                                <p>${descricao}</p>
+                                <div class="user-btm-box mt-5 d-md-flex">
+                                    <p>${descricao}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Column -->
-                    <!-- Column -->
-                    <div class="col-lg-8 col-xlg-9 col-md-12">
+                        <!-- Column -->
+                        <!-- Column -->
+                        <div class="col-lg-8 col-xlg-9 col-md-12">
                             <div class="card">
                                 <div class="card-body">
                                     <form class="form-horizontal form-material" id="form_estabelecimento" method="POST">
@@ -118,26 +127,41 @@
                                         </div>
                                         <div class="form-group mb-4">
                                             <label for="example-email" class="col-md-12 p-0">Telefone</label>
-                                            <div class="col-md-12 border-bottom p-0">
+                                            <div class="col-md-12 border-bottom p-0">                                              
                                                 <input type="tel" placeholder="99999999999" maxlength="11"
                                                        class="form-control p-0 border-0"  name="telefone" value="${telefone}"
                                                        id="example-email">
                                             </div>
                                         </div>
                                         <div class="form-group mb-4">
-                                            <label for="example-email" class="col-md-12 p-0">Imagem de Perfil</label>
+                                            <label for="example-email" class="col-md-12 p-0">Foto de Perfil</label>
                                             <div class="col-md-12 border-bottom p-0">
-                                                <input type="file" 
-                                                       class="form-control p-0 border-0"  name="telefone"
-                                                       id="example-email">
-                                            </div>
-                                        </div>
-                                        <div class="form-group mb-4">
-                                            <label for="example-email" class="col-md-12 p-0">Imagem de Banner</label>
-                                            <div class="col-md-12 border-bottom p-0">
-                                                <input type="file" 
-                                                       class="form-control p-0 border-0"  name="telefone"
-                                                       id="example-email">
+                                                <div style="display:flex;">
+                                                    <div class="foto_perfil">
+                                                        <input type="radio" placeholder="Foto1" value="NotFound.png" name="Hamburguer"><label> Hamburguer</label>
+                                                        <div class="imagem_perfil" style="background-image: url('plugins/images/users/NotFound.png');"></div>
+                                                    </div>
+                                                    <div class="foto_perfil">
+                                                        <input type="radio" placeholder="Foto1" value="Pizza.jpg" name="Hamburguer"><label> Hamburguer</label>
+                                                        <div class="imagem_perfil" style="background-image: url('plugins/images/users/pizza.jpg');" ></div>
+                                                    </div>
+                                                    <div class="foto_perfil">
+                                                        <input type="radio" placeholder="Foto1" value="NotFound.png" name="Hamburguer"><label> Hamburguer</label>
+                                                        <div class="imagem_perfil" ></div>
+                                                    </div>
+                                                    <div class="foto_perfil">
+                                                        <input type="radio" placeholder="Foto1" value="NotFound.png" name="Hamburguer"><label> Hamburguer</label>
+                                                        <div class="imagem_perfil" ></div>
+                                                    </div>
+                                                    <div class="foto_perfil">
+                                                        <input type="radio" placeholder="Foto1" value="NotFound.png" name="Hamburguer"><label> Hamburguer</label>
+                                                        <div class="imagem_perfil" ></div>
+                                                    </div>
+                                                    <div class="foto_perfil">
+                                                        <input type="radio" placeholder="Foto1" value="NotFound.png" name="Hamburguer"><label> Hamburguer</label>
+                                                        <div class="imagem_perfil"></div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group mb-4">
@@ -149,21 +173,21 @@
                                     </form>                                   
                                 </div>                                   
                             </div>
+                        </div>
+                        <!-- Column -->
                     </div>
-                    <!-- Column -->
+                    <!-- Row -->
+                    <!-- ============================================================== -->
+                    <!-- End PAge Content -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Right sidebar -->
+                    <!-- ============================================================== -->
+                    <!-- .right-sidebar -->
+                    <!-- ============================================================== -->
+                    <!-- End Right sidebar -->
+                    <!-- ============================================================== -->
                 </div>
-                <!-- Row -->
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Right sidebar -->
-                <!-- ============================================================== -->
-                <!-- .right-sidebar -->
-                <!-- ============================================================== -->
-                <!-- End Right sidebar -->
-                <!-- ============================================================== -->
-            </div>
                 <!-- ============================================================== -->
                 <!-- End Container fluid  -->
                 <!-- ============================================================== -->

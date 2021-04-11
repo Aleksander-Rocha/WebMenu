@@ -1,8 +1,3 @@
-<%-- 
-    Document   : cardapio
-    Created on : 27/01/2021, 17:29:38
-    Author     : Alexandre
---%>
 
 <%@page import="dao.ItemDAO"%>
 <%@page import="model.ItemModel"%>
@@ -90,9 +85,9 @@
                         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                             <div class="d-md-flex">
                                 <ol class="breadcrumb ml-auto">
-                                    <li><a href="#">Dashboard</a></li>
+                                    <li><a href="#"></a></li>
                                 </ol>
-                                <a href="#" target="_blank"
+                                <a href="vercardapio?key=<%out.print(session.getAttribute("user_id"));%>" target="_blank"
                                    class="btn btn-danger  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Ver cardápio</a>
                             </div>
                         </div>
@@ -137,14 +132,14 @@
                                                 for (int o = 0; o < itens.size(); o++) {%>
                                             <tbody>
                                                 <tr>
-                                                    <td class="txt-oflo"><img src="plugins/images/users/<%out.print(session.getAttribute("user_image"));%>" alt="user-img" width="36" class="img-circle"></td>
+                                                    <td class="txt-oflo"><img src="img_cardapio/item.jpg" alt="user-img" width="36" class="img-circle"></td>
                                                     <td class="txt-oflo"><%out.print(itens.get(o).getNome());%></td>
                                                     <td class="txt-oflo"><%out.print(itens.get(o).getDescricao());%></td>
                                                     <td class="txt-oflo"><span class="text-success">R$<%out.print(itens.get(o).getPreco());%></span></td>
                                                     <td class="txt-oflo"><div class="dropdown">
                                                             <span><i class="fas fa-angle-down"></i>&nbsp;  mais</span>
                                                             <div class="dropdown-content">
-                                                                <a href="#" onclick="javascript:showEdit(<%out.print(itens.get(o).getIditem());%>)" class="editLink"><i class="fas fa-edit"></i>&nbsp;Editar</a><br>
+                                                                <a href="#" onclick="javascript:showEdit('<%=itens.get(o).getIditem()%>','<%=itens.get(o).getNome()%>','<%=itens.get(o).getDescricao()%>','<%=itens.get(o).getPreco()%>')" class="editLink"><i class="fas fa-edit"></i>&nbsp;Editar</a><br>
                                                                 <a href="javascript:excluiritem('excluiritem?key=<%out.print(itens.get(o).getIditem());%>')"><i class="fas fa-trash-alt"></i>&nbsp;Excluir</a>
                                                             </div>
                                                         </div></td>
@@ -212,7 +207,7 @@
             <!-- ============================================================== -->
                     <div class="popup-container hide"></div>
 
-        <form class="popup-form hide" id="form_update_item" method="POST">
+        <form class="popup-form hide" id="form_update_item" method="POST" style="position: fixed;bottom: 50%">
             <h1>Editar Item</h1>
             <input class="input-field" type="file" />
             <input id="nome_update_item" class="input-field" type="text" name="nome_update" placeholder="Nome" required />

@@ -2,7 +2,7 @@
     <body>
         <%@include file="validarsessao.jsp" %>
         <header class="topbar" data-navbarbg="skin5">
-            <nav class="navbar top-navbar navbar-expand-md navbar-dark" style="background-color:4633AF;">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark" >
                 <div class="navbar-header" data-logobg="skin6">
                     <!-- ============================================================== -->
                     <!-- Logo -->
@@ -32,7 +32,7 @@
                 <!-- ============================================================== -->
                 <!-- End Logo -->
                 <!-- ============================================================== -->
-                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5" style="background-color: #2F2C3D">
                     <ul class="navbar-nav d-none d-md-block d-lg-none">
                         <li class="nav-item">
                             <a class="nav-toggler nav-link waves-effect waves-light text-white"
@@ -44,17 +44,6 @@
                     <!-- ============================================================== -->
                     <ul class="navbar-nav ml-auto d-flex align-items-center">
 
-                        <!-- ============================================================== -->
-                        <!-- Search -->
-                        <!-- ============================================================== -->
-                        <li class=" in">
-                            <form role="search" class="app-search d-none d-md-block mr-3">
-                                <input type="text" placeholder="Search..." class="form-control mt-0">
-                                <a href="" class="active">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </form>
-                        </li>
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
@@ -102,34 +91,6 @@
                                aria-expanded="false">
                                 <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                                 <span class="hide-menu">Endereço</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="qrcode.jsp"
-                               aria-expanded="false">
-                                <i class="fas fa-qrcode" aria-hidden="true"></i>
-                                <span class="hide-menu">QrCode</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item pt-2">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="estatistica.jsp"
-                               aria-expanded="false">
-                                <i class="fas fa-chart-bar" aria-hidden="true"></i>
-                                <span class="hide-menu">Estatística</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="blank.jsp"
-                               aria-expanded="false">
-                                <i class="fa fa-columns" aria-hidden="true"></i>
-                                <span class="hide-menu">Blank Page</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="404.html"
-                               aria-expanded="false">
-                                <i class="fa fa-info-circle" aria-hidden="true"></i>
-                                <span class="hide-menu">Error 404</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
