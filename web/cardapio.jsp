@@ -55,18 +55,14 @@
     </head>
 
     <body data-spy="scroll" data-target=".fixed-top">
-        <!-- ============================================================== -->
-        <!-- Preloader - style you can find in spinners.css -->
-        <!-- ============================================================== -->
+        
         <div class="preloader">
             <div class="lds-ripple">
                 <div class="lds-pos"></div>
                 <div class="lds-pos"></div>
             </div>
         </div>
-        <!-- ============================================================== -->
-        <!-- Main wrapper - style you can find in pages.scss -->
-        <!-- ============================================================== -->
+      
         <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
              data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
 
@@ -74,9 +70,7 @@
 
 
             <div class="page-wrapper">
-                <!-- ============================================================== -->
-                <!-- Bread crumb and right sidebar toggle -->
-                <!-- ============================================================== -->
+            
                 <div class="page-breadcrumb bg-white">
                     <div class="row align-items-center">
                         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
@@ -88,22 +82,15 @@
                                     <li><a href="#"></a></li>
                                 </ol>
                                 <a href="vercardapio?key=<%out.print(session.getAttribute("user_id"));%>" target="_blank"
-                                   class="btn btn-danger  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Ver cardápio</a>
+                                   class="btn btn-primary  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light" >Ver cardápio</a>
                             </div>
                         </div>
                     </div>
-                    <!-- /.col-lg-12 -->
+                  
                 </div>
-                <!-- ============================================================== -->
-                <!-- End Bread crumb and right sidebar toggle -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Container fluid  -->
-                <!-- ============================================================== -->
+                
                 <div class="container-fluid">
-                    <!-- ============================================================== -->
-                    <!-- Start Page Content -->
-                    <!-- ============================================================== -->
+                
                     <div class="row">
                         <div class="col-md-12 col-lg-12 col-sm-12">
                             <div class="white-box">
@@ -120,10 +107,10 @@
                                             <%for (int i = 0; i < catList.size(); i++) {%>                                        
                                             <thead>
                                                 <tr>
-                                                    <th class="border-top-0">IMAGEM</th>
+                                                    <th class="border-top-0">Imagem</th>
                                                     <th class="border-top-0"><%out.print(catList.get(i).getNome());%></th>
-                                                    <th class="border-top-0">DESCRIÇÃO</th>
-                                                    <th class="border-top-0">PREÇO</th>
+                                                    <th class="border-top-0">Descrição</th>
+                                                    <th class="border-top-0">Preço</th>
                                                     <th class="border-top-0"><a href='excluircategoria?keycategoria=<%out.print(catList.get(i).getIdcategoria());%>'><i class="fas fa-trash-alt"></i></a></th>
                                                 </tr>
                                             </thead>
@@ -132,7 +119,7 @@
                                                 for (int o = 0; o < itens.size(); o++) {%>
                                             <tbody>
                                                 <tr>
-                                                    <td class="txt-oflo"><img src="img_cardapio/item.jpg" alt="user-img" width="36" class="img-circle"></td>
+                                                    <td class="txt-oflo"><img src="img_cardapio/Talheres.png" alt="user-img" width="36" class="img-circle"></td>
                                                     <td class="txt-oflo"><%out.print(itens.get(o).getNome());%></td>
                                                     <td class="txt-oflo"><%out.print(itens.get(o).getDescricao());%></td>
                                                     <td class="txt-oflo"><span class="text-success">R$<%out.print(itens.get(o).getPreco());%></span></td>
@@ -153,7 +140,7 @@
                                                     <td class="txt-oflo"><input type="text" placeholder="Nome" class="form-control p-0 border-0" name="nome<%out.print(catList.get(i).getIdcategoria());%>"></td>
                                                     <td class="txt-oflo"><input type="text" placeholder="Descrição" class="form-control p-0 border-0" name="descricao<%out.print(catList.get(i).getIdcategoria());%>"></td>  
                                                     <td class="txt-oflo"><input type="number" placeholder="Preço" class="form-control p-0 border-0" name="preco<%out.print(catList.get(i).getIdcategoria());%>" ></td> 
-                                                    <td class="txt-oflo"><button onclick="javascript:adicionaritem('criaritem?keycategoria=<%out.print(catList.get(i).getIdcategoria());%>')">Add Item</button></td>
+                                                    <td class="txt-oflo"><button class="btn btn-primary" onclick="javascript:adicionaritem('criaritem?keycategoria=<%out.print(catList.get(i).getIdcategoria());%>')">Adicionar</button></td>
                                                 </tr>
                                             </tbody>
                                             <%}%>
@@ -168,43 +155,22 @@
                             <div class="white-box">
                                 <div class="d-md-flex mb-3">
                                     <h3 class="box-title mb-0">Adicionar Categoria</h3>
-                                    <div class="col-md-2 col-sm-4 col-xs-6 ml-auto">
-                                        <!--<button class="btn btn-block btn-danger text-white"> + CATEGORIA</button>-->
-                                        <!--<a href="#details-lightbox-categoria" class="btn btn-block btn-danger text-white">+ CATEGORIA</a>-->
-                                    </div>
                                 </div>
-                                <form action="criarcategoria" method="post">
-                                    <input type = "Text" name="nome" placeholder="Nome da Categoria" required="required">
-                                    <input type = "Submit" value="Adicionar">
+                                <form style="display:flex;" action="criarcategoria" method="post">
+                                    <input class="form-control p-0 border-10" style="max-width:250px" type = "Text" name="nome" placeholder="Nome da Categoria" required="required">
+                                    <input class="btn btn-primary"  type="Submit" value="Adicionar">
                                 </form>
                             </div>
                         </div>
                     </div>   
                 </div>
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Right sidebar -->
-                <!-- ============================================================== -->
-                <!-- .right-sidebar -->
-                <!-- ============================================================== -->
-                <!-- End Right sidebar -->
-                <!-- ============================================================== -->
-
+             
             </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
+           
             <footer class="footer text-center"> 2020 © Ample Admin brought to you by <a
                     href="https://www.wrappixel.com/">wrappixel.com</a>
             </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
+           
                     <div class="popup-container hide"></div>
 
         <form class="popup-form hide" id="form_update_item" method="POST" style="position: fixed;bottom: 50%">
@@ -215,19 +181,11 @@
             <input id="preco_update_item" class="input-field" type="number" name="preco_update" placeholder="Preço" required />
             <button onclick="UpdateItem()" class="input-field submit-btn">Alterar</button>
 
-            <!-- close btn -->
+            
             <div class="close-btn">&times;</div>
         </form>
         </div>
-        <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- End Wrapper -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- All Jquery -->
-        <!-- ============================================================== -->
+       
 
         <script src="js/popup-effect.js"></script>
         <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>

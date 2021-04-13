@@ -43,9 +43,9 @@ public class CadastrarServlet extends HttpServlet {
         int status = estdao.cadastrar(est);
         String text = null;
         if (status == 1) {
-            text = "<script type=\"text/javascript\"> alert('Conta criada com sucesso!!')</script>";
+            text = "<script type=\"text/javascript\"> alert('Conta criada com sucesso!')</script>";
         } else if (status == 0) {
-            text = "<script type=\"text/javascript\"> alert('Deu merda!!')</script>";
+            text = "<script type=\"text/javascript\"> alert('Dados inválidos!')</script>";
         }
 
         request.setAttribute("registrar_msg", text);

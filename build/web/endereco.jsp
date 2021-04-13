@@ -49,16 +49,6 @@
                         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                             <h4 class="page-title text-uppercase font-medium font-14">ENDEREÇO</h4>
                         </div>
-                        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                            <div class="d-md-flex">
-                                <ol class="breadcrumb ml-auto">
-                                    <li><a href="#">Dashboard</a></li>
-                                </ol>
-                                <a href="https://wrappixel.com/templates/ampleadmin/" target="_blank"
-                                   class="btn btn-danger  d-none d-md-block pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Upgrade
-                                    to Pro</a>
-                            </div>
-                        </div>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
@@ -501,12 +491,12 @@
                                         </div>                                       
                                         <div class="form-group mb-0">
                                             <div class="col-sm-0">
-                                                <input type="submit" class="btn btn-success" value="Update Endereço">                                                 
+                                                <input type="submit" class="btn btn-success" value="Alterar Endereço">                                                 
                                             </div>
 
                                         </div>
                                 </form>     
-                                                                                 
+
                                 <script type="text/javascript">
                                     //function valornumero(){
                                     const input_numero = document.getElementById('input_numero');
@@ -516,7 +506,7 @@
                                     //}
                                 </script>
                             </div>
-                                       <label style="color: red">${status}</label>
+                            <label style="color: red">${status}</label>
                         </div>
                     </div>
                     <!-- Column -->

@@ -88,7 +88,7 @@
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Leno</a> -->
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.jsp"><img src="images/logo.png" alt="alternative"></a> 
+            <a class="navbar-brand logo-image" href="index.jsp" ><img src="images/logo.png" alt="alternative"></a> 
 
             <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -158,15 +158,15 @@
                         <!-- Counter -->
                         <div id="counter">
                             <div class="cell">
-                                <div class="counter-value number-count" data-count="231">1</div>
+                                <div class="counter-value number-count" data-count="137">1</div>
                                 <p class="counter-info">Contas Criadas</p>
                             </div>
                             <div class="cell">
-                                <div class="counter-value number-count" data-count="85">1</div>
+                                <div class="counter-value number-count" data-count="1511">1</div>
                                 <p class="counter-info">Itens Cadastrados</p>
                             </div>
                             <div class="cell">
-                                <div class="counter-value number-count" data-count="59">1</div>
+                                <div class="counter-value number-count" data-count="3511">1</div>
                                 <p class="counter-info">Total de acessos</p>
                             </div>
 
@@ -339,7 +339,7 @@
             <div class="row">
                 <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
                 <div class="col-lg-5">
-                    <img class="img-fluid" src="images/details-lightbox-1.png" alt="alternative">
+                    <img class="img-fluid" src="images/imagemregistrar.png" alt="alternative">
                 </div>
                 <div class="col-lg-6">
                     <h3>REGISTRAR</h3>
@@ -381,68 +381,10 @@
                     </form>
 
                 </div>
-            </div> <!-- end of row -->
-        </div> <!-- end of lightbox-basic -->
-        <!-- end of lightbox -->
+            </div> 
+        </div> 
 
-        <!-- Lightbox -->
-        <div id="details-lightbox-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
-            <div class="row">
-                <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-                <div class="col-lg-6">
-                    <img class="img-fluid" src="images/details-lightbox-1.png" alt="alternative">
-                </div>
-                <div class="col-lg-6">
-                    <h3>Goals Setting</h3>
-                    <hr>
-                    <p>Leno can easily help you track your personal development evolution if you take the time to set it up.</p>
-                    <h4>User Feedback</h4>
-                    <p>This is a great app which can help you save time and make your live easier. And it will help improve your productivity levels.</p>
-                    <p>You should definitely give it a try when you need a good app.</p>
-                    <table>
-                        <tr><td class="icon-cell"><i class="fas fa-desktop"></i></td><td>Responsive layout</td></tr>
-                        <tr><td class="icon-cell"><i class="fas fa-bullhorn"></i></td><td>Distinctive CTAs</td></tr>
-                        <tr><td class="icon-cell"><i class="fas fa-image"></i></td><td>Image gallery slider</td></tr>
-                        <tr><td class="icon-cell"><i class="fas fa-envelope"></i></td><td>Contact forms</td></tr>
-                        <tr><td class="icon-cell"><i class="fab fa-font-awesome-flag"></i></td><td>FontAwesome icons</td></tr>
-                        <tr><td class="icon-cell"><i class="fas fa-code"></i></td><td>Well-structured code</td></tr>
-                    </table>
-                    <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#details">BACK</a> 
-                </div>
-            </div> <!-- end of row -->
-        </div> <!-- end of lightbox-basic -->
-        <!-- end of lightbox -->
-
-        <!-- Lightbox -->
-        <div id="details-lightbox-2" class="lightbox-basic zoom-anim-dialog mfp-hide">
-            <div class="row">
-                <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-                <div class="col-lg-6">
-                    <img class="img-fluid" src="images/details-lightbox-2.png" alt="alternative">
-                </div>
-                <div class="col-lg-6">
-                    <h3>Calendar Input</h3>
-                    <hr>
-                    <p>The calendar input function enables the user to setup training, meditation and relaxation sessions with ease.</p>
-                    <h4>User Feedback</h4>
-                    <p>This is a great app which can help you save time and make your live easier. And it will help improve your productivity levels.</p>
-                    <p>You should definitely give it a try when you need a good app.</p>
-                    <table>
-                        <tr><td class="icon-cell"><i class="fas fa-desktop"></i></td><td>Responsive layout</td></tr>
-                        <tr><td class="icon-cell"><i class="fas fa-bullhorn"></i></td><td>Distinctive CTAs</td></tr>
-                        <tr><td class="icon-cell"><i class="fas fa-image"></i></td><td>Image gallery slider</td></tr>
-                        <tr><td class="icon-cell"><i class="fas fa-envelope"></i></td><td>Contact forms</td></tr>
-                        <tr><td class="icon-cell"><i class="fab fa-font-awesome-flag"></i></td><td>FontAwesome icons</td></tr>
-                        <tr><td class="icon-cell"><i class="fas fa-code"></i></td><td>Well-structured code</td></tr>
-                    </table>
-                    <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#details">BACK</a>
-                </div>
-            </div> <!-- end of row -->
-        </div> <!-- end of lightbox-basic -->
-        <!-- end of lightbox -->
-        <!-- end of details lightboxes -->
-
-
+       
         <!-- Screenshots -->
         <div class="slider-2">
             <div class="container">
@@ -496,16 +438,16 @@
 
                                     <!-- Slide -->
                                     <div class="swiper-slide">
-                                        <a href="images/screenshot-6.png" class="popup-link" data-effect="fadeIn">
-                                            <img class="img-fluid" src="images/screenshot-6.png" alt="alternative">
+                                        <a href="images/screenshot-7.png" class="popup-link" data-effect="fadeIn">
+                                            <img class="img-fluid" src="images/screenshot-7.png" alt="alternative">
                                         </a>
                                     </div>
                                     <!-- end of slide -->
 
                                     <!-- Slide -->
                                     <div class="swiper-slide">
-                                        <a href="images/screenshot-7.png" class="popup-link" data-effect="fadeIn">
-                                            <img class="img-fluid" src="images/screenshot-7.png" alt="alternative">
+                                        <a href="images/screenshot-6.png" class="popup-link" data-effect="fadeIn">
+                                            <img class="img-fluid" src="images/screenshot-6.png" alt="alternative">
                                         </a>
                                     </div>
                                     <!-- end of slide -->
@@ -572,12 +514,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2>CONTACT</h2>
+                        <h2>CONTATO</h2>
                         <ul class="list-unstyled li-space-lg">
-                            <li class="address">Don't hesitate to give us a call or just use the contact form below</li>
-                            <li><i class="fas fa-map-marker-alt"></i>22 Innovative, San Francisco, CA 94043, US</li>
-                            <li><i class="fas fa-phone"></i><a class="blue" href="tel:003024630820">+81 720 2212</a></li>
-                            <li><i class="fas fa-envelope"></i><a class="blue" href="mailto:office@leno.com">office@leno.com</a></li>
+                            <li class="address">Utilize os meios de comunicação abaixo para dar seu feedback ou propostas.</li>
+                            <li><i class="fas fa-map-marker-alt"></i>Aracaju, Brasil</li>
+                            <li><i class="fas fa-phone"></i><a class="blue" href="tel:79988765605">+55 79 98876-5605</a></li>
+                            <li><i class="fas fa-envelope"></i><a class="blue" href="mailto:pluscardapios@gmail.com">pluscardapios@gmail.com</a></li>
                         </ul>
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
@@ -588,7 +530,7 @@
                         <form id="contactForm" data-toggle="validator" data-focus="false">
                             <div class="form-group">
                                 <input type="text" class="form-control-input" id="cname" required>
-                                <label class="label-control" for="cname">Name</label>
+                                <label class="label-control" for="cname">Nome</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
@@ -598,15 +540,12 @@
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                                <label class="label-control" for="cmessage">Your message</label>
+                                <label class="label-control" for="cmessage">Sua mensagem</label>
                                 <div class="help-block with-errors"></div>
                             </div>
-                            <div class="form-group checkbox">
-                                <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I have read and agree to Leno's stated conditions in <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a> 
-                                <div class="help-block with-errors"></div>
-                            </div>
+                            
                             <div class="form-group">
-                                <button type="submit" class="form-control-submit-button">SUBMIT MESSAGE</button>
+                                <button type="submit" class="form-control-submit-button">ENVIAR MENSAGEM</button>
                             </div>
                             <div class="form-message">
                                 <div id="cmsgSubmit" class="h3 text-center hidden"></div>
@@ -627,28 +566,28 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="footer-col">
-                            <h4>About Leno</h4>
-                            <p>We're passionate about creating the best mobile apps for personal development</p>
+                            <h4>Sobre Nós</h4>
+                            <p>Serviço especializado em facilitar a forma de se apresentar um cardápio nos dias atuais.</p>
                         </div>
                     </div> <!-- end of col -->
-                    <div class="col-md-4">
+                     <div class="col-md-4">
                         <div class="footer-col middle">
-                            <h4>Important Links</h4>
+                            <h4>Link Importantes</h4>
                             <ul class="list-unstyled li-space-lg">
                                 <li class="media">
                                     <i class="fas fa-square"></i>
-                                    <div class="media-body">Our business partners <a class="turquoise" href="#your-link">startupguide.com</a></div>
+                                    <div class="media-body">Conheça também <a class="turquoise" href="#your-link">linkexemplo.com</a></div>
                                 </li>
                                 <li class="media">
                                     <i class="fas fa-square"></i>
-                                    <div class="media-body">Read our <a class="turquoise" href="terms-conditions.html">Terms & Conditions</a>, <a class="turquoise" href="privacy-policy.html">Privacy Policy</a></div>
+                                    <div class="media-body">Vá para <a class="turquoise" href="">Outra página</a></div>
                                 </li>
                             </ul>
-                        </div>
-                    </div> <!-- end of col -->
+                        </div> 
+                    </div>   <!-- end of col --> 
                     <div class="col-md-4">
                         <div class="footer-col last">
-                            <h4>Social Media</h4>
+                            <h4>Mídias Sociais</h4>
                             <span class="fa-stack">
                                 <a href="#your-link">
                                     <i class="fas fa-circle fa-stack-2x"></i>

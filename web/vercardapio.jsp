@@ -35,8 +35,9 @@
     <body>
         <header>
             <div class="center-header">
-                <div class="banner" style="background-image: url('plugins/images/users/${est_imagem}');">
-
+               <!-- <div class="banner" style="background-image: url('plugins/images/users/${est_imagem}');"> -->
+                    <div class="banner" style="background-image: url('img_cardapio/NotFound2.png');">
+                        
                 </div>
                 <div class="info">
                     <h1>${est_nome}</h1>
@@ -78,7 +79,7 @@
                                     for (int o = 0; o < itens.size(); o++) {%>
 
                                 <div class="flex-item">
-                                    <img src="img_cardapio/item.jpg" alt="">
+                                    <img src="img_cardapio/Talheres.png" alt="">
                                     <div class="item-info">
                                         <h4><%=itens.get(o).getNome()%></h4>
                                         <p><%=itens.get(o).getDescricao()%></p>
